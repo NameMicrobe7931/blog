@@ -45,6 +45,25 @@
             opacity: 0.8; /* 悬停时的透明度变化 */
         }
 
+        /* 新增按钮样式 */
+        .transparent-button {
+            position: absolute; /* 绝对定位 */
+            top: 20px; /* 距离顶部20px */
+            left: 20px; /* 距离左侧20px */
+            background-color: rgba(0, 0, 0, 0); /* 半透明白色背景 */
+            color: black; /* 按钮文字颜色 */
+            border: 2px solid white; /* 白色边框 */
+            border-radius: 10px; /* 圆角半径 */
+            padding: 10px 20px; /* 内边距 */
+            cursor: pointer; /* 鼠标悬停时显示手形光标 */
+            font-size: 16px; /* 字体大小 */
+            transition: background-color 0.3s; /* 背景颜色过渡效果 */
+        }
+
+        .transparent-button:hover {
+            background-color: rgba(0, 0, 0, 0); /* 悬停时的背景颜色 */
+        }
+
         /* 媒体查询：手机版样式 */
         @media (max-width: 768px) {
             body {
@@ -53,6 +72,11 @@
             .box {
                 width: 90%; /* 手机版每个盒子占据90%宽度 */
                 margin: 5% auto; /* 上下间距，左右居中 */
+            }
+            .transparent-button {
+                width: 25%; /* 手机版按钮宽度减小为50% */
+                padding: 10px 0; /* 内边距调整 */
+                left: 5%; /* 水平居中 */
             }
         }
 
@@ -74,6 +98,9 @@
 <body>
 
 <h1>友链</h1> <!-- 将标题放在盒子上方 -->
+
+<!-- 新增的透明按钮 -->
+<button class="transparent-button" onclick="window.location.href='https://blog.ikgy.top';">返回主页</button>
 
 <div class="box" style="background-image: url('bg.webp');" onclick="window.location.href='https://sst.ikgy.top';">
     西南伺服官网</div>
