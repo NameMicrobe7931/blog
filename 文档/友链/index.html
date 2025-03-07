@@ -94,6 +94,16 @@
             margin-top: 1px; /* 段落与盒子之间的间距 */
         }
     </style>
+        <script>
+        function copyToClipboard() {
+            const email = "653838873@qq.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("邮箱已复制到剪贴板: " + email);
+            }).catch(err => {
+                console.error("复制失败: ", err);
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -111,7 +121,7 @@
     xxx
 </div>
 
-<p>若想加入展示，请发送邮件到653838873@qq.com</br>内容包括: 网站url、div背景和标题、简介</p> <!-- 添加的段落 -->
+<p onclick="copyToClipboard()" style="cursor: pointer;">若想加入展示，请点击复制邮箱到剪贴板</br>内容包括: 网站url、div背景和标题、简介</p> <!-- 添加的段落 -->
 
 <footer>
     本页面为beta版，展示页面并不一定是正式效果</br>&copy; power by serika <!-- 添加的页脚 -->
