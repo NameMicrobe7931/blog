@@ -98,9 +98,9 @@
         function copyToClipboard() {
             const email = "653838873@qq.com";
             navigator.clipboard.writeText(email).then(() => {
-                alert("邮箱已复制到剪贴板: " + email);
+                alert("复制完成");
             }).catch(err => {
-                console.error("复制失败: ", err);
+                console.error("复制失败 ", err);
             });
         }
     </script>
@@ -121,7 +121,7 @@
     xxx
 </div>
 
-<p onclick="copyToClipboard()" style="cursor: pointer;">若想加入展示，请点击复制邮箱到剪贴板</br>内容包括: 网站url、div背景和标题、简介</p> <!-- 添加的段落 -->
+<p onclick="copyToClipboard()" style="cursor: pointer;">若想加入展示，请点击本行复制邮箱号</br>提交内容包括: 网站url、div背景和标题、简介</p>
 
 <footer>
     本页面为beta版，展示页面并不一定是正式效果</br>&copy; power by serika <!-- 添加的页脚 -->
